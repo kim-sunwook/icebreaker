@@ -2,10 +2,10 @@
   <transition appear name="fade" mode="out-in">
     <div class="content">
       <div class="title">
-        Waiting
+        대기 중...
       </div>
       <router-link to="/room">
-        <div class="button submit-button">Start</div>
+        <div class="button submit-button">시작하기</div>
       </router-link>
 
     </div>

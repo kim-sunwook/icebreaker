@@ -2,7 +2,7 @@
   <div class="content">
     <transition appear name="fade" mode="out-in">
     <div class="phase-container" v-if="selectPhase">
-      <div class="title">Choose a Question</div>
+      <div class="title">질문을 선택해주세요</div>
       <div class="question-container">
       <div class="arrow el-icon-arrow-left" @click="decreaseIndex(0)"></div>
       <transition name="fade" mode="out-in">
@@ -12,7 +12,7 @@
       </transition>
       <div class="arrow el-icon-arrow-right" @click="increaseIndex(0)"></div>
       </div>
-      <div class="button submit-button" @click="questionSelected()">Select</div>
+      <div class="button submit-button" @click="questionSelected()">선택</div>
     </div>
     </transition>
     <transition name="fade" mode="out-in">
@@ -20,8 +20,8 @@
       <div class="center-box question-box" style="height:40%">
         {{ selectedQuestion }}
       </div>
-      <input type="text" class="center-box answer-text-field" placeholder="Type your answer" v-model="submittedAnswer"/>
-      <div class="button submit-button" @click="questionAnswered()">Submit</div>
+      <input type="text" class="center-box answer-text-field" placeholder="여기에 입력하세요" v-model="submittedAnswer"/>
+      <div class="button submit-button" @click="questionAnswered()">제출</div>
     </div>
     </transition>
     <transition name="fade" mode="out-in">
@@ -41,7 +41,7 @@
           <div class="arrow el-icon-arrow-right down-arrow" @click="decreaseIndex(2)"></div>
         </div>
       </div>
-      <div class="button submit-button" @click="checkPair()">Correct?</div>
+      <div class="button submit-button" @click="checkPair()">선택</div>
     </div>
     </transition>
   </div>
@@ -196,7 +196,7 @@ export default {
 
         // If done, go to question select phase
         if (this.answers.length == 0) {
-          confirm('Congratulations!');
+          confirm('축하합니다! 모두 맞혔습니다!');
           this.guessPhase = false;
           this.selectPhase = true;
         } else{

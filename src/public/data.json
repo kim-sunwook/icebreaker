@@ -1,14 +1,14 @@
 [
   {
-    "id": 1, "answer": "Fox", "user": "John"
+    "id": 1, "answer": "여우", "user": "김여우"
   },
   {
-    "id": 2, "answer": "Tiger", "user": "Alice"
+    "id": 2, "answer": "거북", "user": "이거북"
   },
   {
-    "id": 3, "answer": "Snake", "user": "Bob"
+    "id": 3, "answer": "사자", "user": "박사자"
   },
   {
-    "id": 4, "answer": "Turtle", "user": "Jake"
+    "id": 4, "answer": "뱀", "user": "최뱀"
   }
 ]

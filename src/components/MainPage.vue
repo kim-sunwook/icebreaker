@@ -45,8 +45,8 @@ export default {
       template: '<span>Join Room</span>'
     },
     'create_follow_box' : {
-      template: `<span class="form"><div>Your Room ID is <b>{{makeid()}}</b></div>
-          <div>Your name: <input type="text" id="create-user-input"/></div>
+      template: `<span class="form"><div>개설되는 방 ID는 <b>{{makeid()}}</b>입니다.</div>
+          <div>이름 입력: <input type="text" id="create-user-input"/></div>
           <router-link to="/wait">
             <div class="button submit-button" @click="setUsername($event)">Create!</div>
           </router-link></span>`,
@@ -70,8 +70,8 @@ export default {
     },
     'join_follow_box' : {
       template:`<span class="form">
-          <div>Room ID: <input type="text"/></div>
-          <div>Your name: <input type="text" id="join-user-input"/></div>
+          <div>방 ID 입력: <input type="text"/></div>
+          <div>이름 입력: <input type="text" id="join-user-input"/></div>
           <router-link to="/wait">
             <div class="button submit-button" @click="setUsername($event)">Join!</div>
           </router-link></span>`,

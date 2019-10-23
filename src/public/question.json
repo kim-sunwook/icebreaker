@@ -1,6 +1,6 @@
 [
-  { "id": 1, "question": "If you were an animal, what animal would you be?" },
-  { "id": 2, "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas rutrum scelerisque justo et lobortis. Pellentesque sed erat iaculis?" },
-  { "id": 3, "question": "Question3" },
-  { "id": 4, "question": "Question4" }
+  { "id": 1, "question": "동물이 될 수 있다면 어떤 동물이 되고 싶나요?" },
+  { "id": 2, "question": "동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세" },
+  { "id": 3, "question": "질문3" },
+  { "id": 4, "question": "질문4" }
 ]
