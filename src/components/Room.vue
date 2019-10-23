@@ -32,7 +32,7 @@
       <div class="matching-container">
         <div class="matching-controller">
           <div class="arrow el-icon-arrow-left up-arrow" @click="increaseIndex(1)"></div>
-          <div class="center-box matching-select">{{ selectedAnswer }}</div>
+          <div class="center-box matching-select" v-bind:style="{ backgroundColor: answerColor }">{{ selectedAnswer }}</div>
           <div class="arrow el-icon-arrow-right down-arrow" @click="decreaseIndex(1)"></div>
         </div>
         <div class="matching-controller">
@@ -74,7 +74,8 @@ export default {
       selectPhase: true, /*DEBUG*/
       answerPhase: false,
       guessPhase: false,
-      correctGuess: null
+      correctGuess: null,
+      answerColor: 'red'
     }
   },
   computed: {
@@ -87,19 +88,19 @@ export default {
     selectedUser() {
       return this.users[this.userIndex];
     },
-    title() {
+    guessResponse() {
       if (this.answerPhase) {
-        return 'Question';
+        return 'white';
       } else if (this.guessPhase) {
         if (this.correctGuess === null) {
-          return 'Guess!';
+          return 'white';
         } else if (this.correctGuess) {
-          return 'Correct!';
+          return 'green';
         } else {
-          return '땡!';
+          return 'red';
         }
       } else {
-        return 'Choose';
+        return 'white';
       }
     }
   },
@@ -154,7 +155,7 @@ export default {
       var user = this.selectedUser;
 
       var idx = this.guessPair[ans].indexOf(user);
-
+      var newColor = 'green';
       if (idx > -1) {
         this.correctGuess = true;
         
@@ -179,6 +180,8 @@ export default {
       } else {
         this.correctGuess = false;
       }
+      this.answerColor = newColor;
+      setTimeout(() => this.answerColor='white',3000);
     }
   }
 }
